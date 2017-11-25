@@ -1,0 +1,87 @@
+(load "Test.carp")
+(use Test)
+
+(load "stdint.carp")
+(use Uint16)
+
+(defn main []
+  (with-test test
+    (assert-equal test
+                  (from-long 3l)
+                  (+ (from-long 1l) (from-long 2l))
+                  "addition works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 3l)
+                  (- (from-long 2l) (from-long -1l))
+                  "subtraction works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long -4l)
+                  (* (from-long 2l) (from-long -2l))
+                  "multiplication works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 2l)
+                  (/ (from-long 5l) (from-long 2l))
+                  "division works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 2l)
+                  (/ (from-long 5l) (from-long 2l))
+                  "division works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 8l)
+                  (<< (from-long 2l) (from-long 2l))
+                  "shift left works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 1l)
+                  (>> (from-long 4l) (from-long 2l))
+                  "shift right works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 6l)
+                  (bor (from-long 4l) (from-long 2l))
+                  "binary or works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 2l)
+                  (band (from-long 6l) (from-long 3l))
+                  "binary and works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 65407l)
+                  (bnot (from-long 128l))
+                  "binary not works"
+                  =
+                  str)
+    (assert-equal test
+                  (from-long 5l)
+                  (bxor (from-long 6l) (from-long 3l))
+                  "binary xor works"
+                  =
+                  str)
+    (assert-equal test
+                  5l
+                  (to-long (from-long 5l))
+                  "conversion works"
+                  Long.=
+                  Long.str)
+    (assert-equal test
+                  "Uint16(1)"
+                  &(str (from-long 1l))
+                  "str works"
+                  String.=
+                  String.str)
+    (print-test-results test)))

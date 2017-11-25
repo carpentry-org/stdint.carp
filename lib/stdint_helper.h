@@ -24,10 +24,10 @@ bool Uint8__LT_(Uint8 x, Uint8 y) { return x < y; }
 bool Uint8__GT_(Uint8 x, Uint8 y) { return x > y; }
 Uint8 Uint8__LT__LT_(Uint8 x, Uint8 y) { return x << y; }
 Uint8 Uint8__GT__GT_(Uint8 x, Uint8 y) { return x >> y; }
-Uint8 Uint8__bor(Uint8 x, Uint8 y) { return x | y; }
-Uint8 Uint8__band(Uint8 x, Uint8 y) { return x & y; }
-Uint8 Uint8__bnot(Uint8 x) { return ~x; }
-Uint8 Uint8__bxor(Uint8 x, Uint8 y) { return x ^ y; }
+Uint8 Uint8_bor(Uint8 x, Uint8 y) { return x | y; }
+Uint8 Uint8_band(Uint8 x, Uint8 y) { return x & y; }
+Uint8 Uint8_bnot(Uint8 x) { return ~x; }
+Uint8 Uint8_bxor(Uint8 x, Uint8 y) { return x ^ y; }
 string Uint8_str(Uint8 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint8(%hhu)", x);
@@ -49,10 +49,10 @@ bool Uint16__LT_(Uint16 x, Uint16 y) { return x < y; }
 bool Uint16__GT_(Uint16 x, Uint16 y) { return x > y; }
 Uint16 Uint16__LT__LT_(Uint16 x, Uint16 y) { return x << y; }
 Uint16 Uint16__GT__GT_(Uint16 x, Uint16 y) { return x >> y; }
-Uint16 Uint16__bor(Uint16 x, Uint16 y) { return x | y; }
-Uint16 Uint16__band(Uint16 x, Uint16 y) { return x & y; }
-Uint16 Uint16__bnot(Uint16 x) { return ~x; }
-Uint16 Uint16__bxor(Uint16 x, Uint16 y) { return x ^ y; }
+Uint16 Uint16_bor(Uint16 x, Uint16 y) { return x | y; }
+Uint16 Uint16_band(Uint16 x, Uint16 y) { return x & y; }
+Uint16 Uint16_bnot(Uint16 x) { return ~x; }
+Uint16 Uint16_bxor(Uint16 x, Uint16 y) { return x ^ y; }
 string Uint16_str(Uint16 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint16(%hu)", x);
@@ -74,10 +74,10 @@ bool Uint32__LT_(Uint32 x, Uint32 y) { return x < y; }
 bool Uint32__GT_(Uint32 x, Uint32 y) { return x > y; }
 Uint32 Uint32__LT__LT_(Uint32 x, Uint32 y) { return x << y; }
 Uint32 Uint32__GT__GT_(Uint32 x, Uint32 y) { return x >> y; }
-Uint32 Uint32__bor(Uint32 x, Uint32 y) { return x | y; }
-Uint32 Uint32__band(Uint32 x, Uint32 y) { return x & y; }
-Uint32 Uint32__bnot(Uint32 x) { return ~x; }
-Uint32 Uint32__bxor(Uint32 x, Uint32 y) { return x ^ y; }
+Uint32 Uint32_bor(Uint32 x, Uint32 y) { return x | y; }
+Uint32 Uint32_band(Uint32 x, Uint32 y) { return x & y; }
+Uint32 Uint32_bnot(Uint32 x) { return ~x; }
+Uint32 Uint32_bxor(Uint32 x, Uint32 y) { return x ^ y; }
 string Uint32_str(Uint32 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint32(%u)", x);
@@ -99,10 +99,10 @@ bool Uint64__LT_(Uint64 x, Uint64 y) { return x < y; }
 bool Uint64__GT_(Uint64 x, Uint64 y) { return x > y; }
 Uint64 Uint64__LT__LT_(Uint64 x, Uint64 y) { return x << y; }
 Uint64 Uint64__GT__GT_(Uint64 x, Uint64 y) { return x >> y; }
-Uint64 Uint64__bor(Uint64 x, Uint64 y) { return x | y; }
-Uint64 Uint64__band(Uint64 x, Uint64 y) { return x & y; }
-Uint64 Uint64__bnot(Uint64 x) { return ~x; }
-Uint64 Uint64__bxor(Uint64 x, Uint64 y) { return x ^ y; }
+Uint64 Uint64_bor(Uint64 x, Uint64 y) { return x | y; }
+Uint64 Uint64_band(Uint64 x, Uint64 y) { return x & y; }
+Uint64 Uint64_bnot(Uint64 x) { return ~x; }
+Uint64 Uint64_bxor(Uint64 x, Uint64 y) { return x ^ y; }
 string Uint64_str(Uint64 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint64(%llu)", x);
@@ -124,10 +124,10 @@ bool Int8__LT_(Int8 x, Int8 y) { return x < y; }
 bool Int8__GT_(Int8 x, Int8 y) { return x > y; }
 Int8 Int8__LT__LT_(Int8 x, Int8 y) { return x << y; }
 Int8 Int8__GT__GT_(Int8 x, Int8 y) { return x >> y; }
-Int8 Int8__bor(Int8 x, Int8 y) { return x | y; }
-Int8 Int8__band(Int8 x, Int8 y) { return x & y; }
-Int8 Int8__bnot(Int8 x) { return ~x; }
-Int8 Int8__bxor(Int8 x, Int8 y) { return x ^ y; }
+Int8 Int8_bor(Int8 x, Int8 y) { return x | y; }
+Int8 Int8_band(Int8 x, Int8 y) { return x & y; }
+Int8 Int8_bnot(Int8 x) { return ~x; }
+Int8 Int8_bxor(Int8 x, Int8 y) { return x ^ y; }
 string Int8_str(Int8 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int8(%hhd)", x);
@@ -150,10 +150,10 @@ bool Int16__LT_(Int16 x, Int16 y) { return x < y; }
 bool Int16__GT_(Int16 x, Int16 y) { return x > y; }
 Int16 Int16__LT__LT_(Int16 x, Int16 y) { return x << y; }
 Int16 Int16__GT__GT_(Int16 x, Int16 y) { return x >> y; }
-Int16 Int16__bor(Int16 x, Int16 y) { return x | y; }
-Int16 Int16__band(Int16 x, Int16 y) { return x & y; }
-Int16 Int16__bnot(Int16 x) { return ~x; }
-Int16 Int16__bxor(Int16 x, Int16 y) { return x ^ y; }
+Int16 Int16_bor(Int16 x, Int16 y) { return x | y; }
+Int16 Int16_band(Int16 x, Int16 y) { return x & y; }
+Int16 Int16_bnot(Int16 x) { return ~x; }
+Int16 Int16_bxor(Int16 x, Int16 y) { return x ^ y; }
 string Int16_str(Int16 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int16(%hd)", x);
@@ -176,10 +176,10 @@ bool Int32__LT_(Int32 x, Int32 y) { return x < y; }
 bool Int32__GT_(Int32 x, Int32 y) { return x > y; }
 Int32 Int32__LT__LT_(Int32 x, Int32 y) { return x << y; }
 Int32 Int32__GT__GT_(Int32 x, Int32 y) { return x >> y; }
-Int32 Int32__bor(Int32 x, Int32 y) { return x | y; }
-Int32 Int32__band(Int32 x, Int32 y) { return x & y; }
-Int32 Int32__bnot(Int32 x) { return ~x; }
-Int32 Int32__bxor(Int32 x, Int32 y) { return x ^ y; }
+Int32 Int32_bor(Int32 x, Int32 y) { return x | y; }
+Int32 Int32_band(Int32 x, Int32 y) { return x & y; }
+Int32 Int32_bnot(Int32 x) { return ~x; }
+Int32 Int32_bxor(Int32 x, Int32 y) { return x ^ y; }
 string Int32_str(Int32 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int32(%d)", x);
@@ -202,10 +202,10 @@ bool Int64__LT_(Int64 x, Int64 y) { return x < y; }
 bool Int64__GT_(Int64 x, Int64 y) { return x > y; }
 Int64 Int64__LT__LT_(Int64 x, Int64 y) { return x << y; }
 Int64 Int64__GT__GT_(Int64 x, Int64 y) { return x >> y; }
-Int64 Int64__bor(Int64 x, Int64 y) { return x | y; }
-Int64 Int64__band(Int64 x, Int64 y) { return x & y; }
-Int64 Int64__bnot(Int64 x) { return ~x; }
-Int64 Int64__bxor(Int64 x, Int64 y) { return x ^ y; }
+Int64 Int64_bor(Int64 x, Int64 y) { return x | y; }
+Int64 Int64_band(Int64 x, Int64 y) { return x & y; }
+Int64 Int64_bnot(Int64 x) { return ~x; }
+Int64 Int64_bxor(Int64 x, Int64 y) { return x ^ y; }
 string Int64_str(Int64 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int64(%lld)", x);
