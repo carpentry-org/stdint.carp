@@ -3,8 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef char* string;
-#define CARP_MALLOC(size) malloc(size)
+#include <core.h>
 
 typedef uint8_t Uint8;
 typedef uint16_t Uint16;
