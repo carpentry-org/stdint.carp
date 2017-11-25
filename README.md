@@ -49,7 +49,8 @@ str (λ [T] String))
   converts a number to a string (it will look like this: "T(<value>)")
 ```
 
-I hope this helps in getting started!
+I hope this helps in getting started! The tests in `tests/` also showcase the
+interface.
 
 <hr/>
 
