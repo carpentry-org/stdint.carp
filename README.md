@@ -29,17 +29,17 @@ with T being any of the types in the library:
   multiplies two numbers
 / (λ [T T] T))
   divides two numbers
-<< (λ [T T] T))
+bit-shift-left (λ [T T] T))
   shifts the first number left by a number of bytes specified by the second number
->> (λ [T T] T))
+bit-shift-right (λ [T T] T))
   shifts the first number right by a number of bytes specified by the second number
-bor (λ [T T] T))
+bit-or (λ [T T] T))
   performs a binary or on two numbers
-band (λ [T T] T))
+bit-and (λ [T T] T))
   performs a binary and on two numbers
-bnot (λ [T] T))
+bit-not (λ [T] T))
   performs a binary not on a number
-bxor (λ [T T] T))
+bit-xor (λ [T T] T))
   performs a binary xor on two numbers
 to-long (λ [T] Long))
   converts a number to a long (might lead to precision loss on the biggest types)

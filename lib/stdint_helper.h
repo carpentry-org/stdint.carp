@@ -21,12 +21,12 @@ Uint8 Uint8__DIV_(Uint8 x, Uint8 y) { return x / y; }
 bool Uint8__EQ_(Uint8 x, Uint8 y) { return x == y; }
 bool Uint8__LT_(Uint8 x, Uint8 y) { return x < y; }
 bool Uint8__GT_(Uint8 x, Uint8 y) { return x > y; }
-Uint8 Uint8__LT__LT_(Uint8 x, Uint8 y) { return x << y; }
-Uint8 Uint8__GT__GT_(Uint8 x, Uint8 y) { return x >> y; }
-Uint8 Uint8_bor(Uint8 x, Uint8 y) { return x | y; }
-Uint8 Uint8_band(Uint8 x, Uint8 y) { return x & y; }
-Uint8 Uint8_bnot(Uint8 x) { return ~x; }
-Uint8 Uint8_bxor(Uint8 x, Uint8 y) { return x ^ y; }
+Uint8 Uint8_bit_MINUS_shift_MINUS_left(Uint8 x, Uint8 y) { return x << y; }
+Uint8 Uint8_bit_MINUS_shift_MINUS_right(Uint8 x, Uint8 y) { return x >> y; }
+Uint8 Uint8_bit_MINUS_or(Uint8 x, Uint8 y) { return x | y; }
+Uint8 Uint8_bit_MINUS_and(Uint8 x, Uint8 y) { return x & y; }
+Uint8 Uint8_bit_MINUS_not(Uint8 x) { return ~x; }
+Uint8 Uint8_bit_MINUS_xor(Uint8 x, Uint8 y) { return x ^ y; }
 string Uint8_str(Uint8 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint8(%hhu)", x);
@@ -46,12 +46,12 @@ Uint16 Uint16__DIV_(Uint16 x, Uint16 y) { return x / y; }
 bool Uint16__EQ_(Uint16 x, Uint16 y) { return x == y; }
 bool Uint16__LT_(Uint16 x, Uint16 y) { return x < y; }
 bool Uint16__GT_(Uint16 x, Uint16 y) { return x > y; }
-Uint16 Uint16__LT__LT_(Uint16 x, Uint16 y) { return x << y; }
-Uint16 Uint16__GT__GT_(Uint16 x, Uint16 y) { return x >> y; }
-Uint16 Uint16_bor(Uint16 x, Uint16 y) { return x | y; }
-Uint16 Uint16_band(Uint16 x, Uint16 y) { return x & y; }
-Uint16 Uint16_bnot(Uint16 x) { return ~x; }
-Uint16 Uint16_bxor(Uint16 x, Uint16 y) { return x ^ y; }
+Uint16 Uint16_bit_MINUS_shift_MINUS_left(Uint16 x, Uint16 y) { return x << y; }
+Uint16 Uint16_bit_MINUS_shift_MINUS_right(Uint16 x, Uint16 y) { return x >> y; }
+Uint16 Uint16_bit_MINUS_or(Uint16 x, Uint16 y) { return x | y; }
+Uint16 Uint16_bit_MINUS_and(Uint16 x, Uint16 y) { return x & y; }
+Uint16 Uint16_bit_MINUS_not(Uint16 x) { return ~x; }
+Uint16 Uint16_bit_MINUS_xor(Uint16 x, Uint16 y) { return x ^ y; }
 string Uint16_str(Uint16 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint16(%hu)", x);
@@ -71,12 +71,12 @@ Uint32 Uint32__DIV_(Uint32 x, Uint32 y) { return x / y; }
 bool Uint32__EQ_(Uint32 x, Uint32 y) { return x == y; }
 bool Uint32__LT_(Uint32 x, Uint32 y) { return x < y; }
 bool Uint32__GT_(Uint32 x, Uint32 y) { return x > y; }
-Uint32 Uint32__LT__LT_(Uint32 x, Uint32 y) { return x << y; }
-Uint32 Uint32__GT__GT_(Uint32 x, Uint32 y) { return x >> y; }
-Uint32 Uint32_bor(Uint32 x, Uint32 y) { return x | y; }
-Uint32 Uint32_band(Uint32 x, Uint32 y) { return x & y; }
-Uint32 Uint32_bnot(Uint32 x) { return ~x; }
-Uint32 Uint32_bxor(Uint32 x, Uint32 y) { return x ^ y; }
+Uint32 Uint32_bit_MINUS_shift_MINUS_left(Uint32 x, Uint32 y) { return x << y; }
+Uint32 Uint32_bit_MINUS_shift_MINUS_right(Uint32 x, Uint32 y) { return x >> y; }
+Uint32 Uint32_bit_MINUS_or(Uint32 x, Uint32 y) { return x | y; }
+Uint32 Uint32_bit_MINUS_and(Uint32 x, Uint32 y) { return x & y; }
+Uint32 Uint32_bit_MINUS_not(Uint32 x) { return ~x; }
+Uint32 Uint32_bit_MINUS_xor(Uint32 x, Uint32 y) { return x ^ y; }
 string Uint32_str(Uint32 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint32(%u)", x);
@@ -96,12 +96,12 @@ Uint64 Uint64__DIV_(Uint64 x, Uint64 y) { return x / y; }
 bool Uint64__EQ_(Uint64 x, Uint64 y) { return x == y; }
 bool Uint64__LT_(Uint64 x, Uint64 y) { return x < y; }
 bool Uint64__GT_(Uint64 x, Uint64 y) { return x > y; }
-Uint64 Uint64__LT__LT_(Uint64 x, Uint64 y) { return x << y; }
-Uint64 Uint64__GT__GT_(Uint64 x, Uint64 y) { return x >> y; }
-Uint64 Uint64_bor(Uint64 x, Uint64 y) { return x | y; }
-Uint64 Uint64_band(Uint64 x, Uint64 y) { return x & y; }
-Uint64 Uint64_bnot(Uint64 x) { return ~x; }
-Uint64 Uint64_bxor(Uint64 x, Uint64 y) { return x ^ y; }
+Uint64 Uint64_bit_MINUS_shift_MINUS_left(Uint64 x, Uint64 y) { return x << y; }
+Uint64 Uint64_bit_MINUS_shift_MINUS_right(Uint64 x, Uint64 y) { return x >> y; }
+Uint64 Uint64_bit_MINUS_or(Uint64 x, Uint64 y) { return x | y; }
+Uint64 Uint64_bit_MINUS_and(Uint64 x, Uint64 y) { return x & y; }
+Uint64 Uint64_bit_MINUS_not(Uint64 x) { return ~x; }
+Uint64 Uint64_bit_MINUS_xor(Uint64 x, Uint64 y) { return x ^ y; }
 string Uint64_str(Uint64 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Uint64(%llu)", x);
@@ -121,12 +121,12 @@ Int8 Int8__DIV_(Int8 x, Int8 y) { return x / y; }
 bool Int8__EQ_(Int8 x, Int8 y) { return x == y; }
 bool Int8__LT_(Int8 x, Int8 y) { return x < y; }
 bool Int8__GT_(Int8 x, Int8 y) { return x > y; }
-Int8 Int8__LT__LT_(Int8 x, Int8 y) { return x << y; }
-Int8 Int8__GT__GT_(Int8 x, Int8 y) { return x >> y; }
-Int8 Int8_bor(Int8 x, Int8 y) { return x | y; }
-Int8 Int8_band(Int8 x, Int8 y) { return x & y; }
-Int8 Int8_bnot(Int8 x) { return ~x; }
-Int8 Int8_bxor(Int8 x, Int8 y) { return x ^ y; }
+Int8 Int8_bit_MINUS_shift_MINUS_left(Int8 x, Int8 y) { return x << y; }
+Int8 Int8_bit_MINUS_shift_MINUS_right(Int8 x, Int8 y) { return x >> y; }
+Int8 Int8_bit_MINUS_or(Int8 x, Int8 y) { return x | y; }
+Int8 Int8_bit_MINUS_and(Int8 x, Int8 y) { return x & y; }
+Int8 Int8_bit_MINUS_not(Int8 x) { return ~x; }
+Int8 Int8_bit_MINUS_xor(Int8 x, Int8 y) { return x ^ y; }
 string Int8_str(Int8 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int8(%hhd)", x);
@@ -147,12 +147,12 @@ Int16 Int16__DIV_(Int16 x, Int16 y) { return x / y; }
 bool Int16__EQ_(Int16 x, Int16 y) { return x == y; }
 bool Int16__LT_(Int16 x, Int16 y) { return x < y; }
 bool Int16__GT_(Int16 x, Int16 y) { return x > y; }
-Int16 Int16__LT__LT_(Int16 x, Int16 y) { return x << y; }
-Int16 Int16__GT__GT_(Int16 x, Int16 y) { return x >> y; }
-Int16 Int16_bor(Int16 x, Int16 y) { return x | y; }
-Int16 Int16_band(Int16 x, Int16 y) { return x & y; }
-Int16 Int16_bnot(Int16 x) { return ~x; }
-Int16 Int16_bxor(Int16 x, Int16 y) { return x ^ y; }
+Int16 Int16_bit_MINUS_shift_MINUS_left(Int16 x, Int16 y) { return x << y; }
+Int16 Int16_bit_MINUS_shift_MINUS_right(Int16 x, Int16 y) { return x >> y; }
+Int16 Int16_bit_MINUS_or(Int16 x, Int16 y) { return x | y; }
+Int16 Int16_bit_MINUS_and(Int16 x, Int16 y) { return x & y; }
+Int16 Int16_bit_MINUS_not(Int16 x) { return ~x; }
+Int16 Int16_bit_MINUS_xor(Int16 x, Int16 y) { return x ^ y; }
 string Int16_str(Int16 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int16(%hd)", x);
@@ -173,12 +173,12 @@ Int32 Int32__DIV_(Int32 x, Int32 y) { return x / y; }
 bool Int32__EQ_(Int32 x, Int32 y) { return x == y; }
 bool Int32__LT_(Int32 x, Int32 y) { return x < y; }
 bool Int32__GT_(Int32 x, Int32 y) { return x > y; }
-Int32 Int32__LT__LT_(Int32 x, Int32 y) { return x << y; }
-Int32 Int32__GT__GT_(Int32 x, Int32 y) { return x >> y; }
-Int32 Int32_bor(Int32 x, Int32 y) { return x | y; }
-Int32 Int32_band(Int32 x, Int32 y) { return x & y; }
-Int32 Int32_bnot(Int32 x) { return ~x; }
-Int32 Int32_bxor(Int32 x, Int32 y) { return x ^ y; }
+Int32 Int32_bit_MINUS_shift_MINUS_left(Int32 x, Int32 y) { return x << y; }
+Int32 Int32_bit_MINUS_shift_MINUS_right(Int32 x, Int32 y) { return x >> y; }
+Int32 Int32_bit_MINUS_or(Int32 x, Int32 y) { return x | y; }
+Int32 Int32_bit_MINUS_and(Int32 x, Int32 y) { return x & y; }
+Int32 Int32_bit_MINUS_not(Int32 x) { return ~x; }
+Int32 Int32_bit_MINUS_xor(Int32 x, Int32 y) { return x ^ y; }
 string Int32_str(Int32 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int32(%d)", x);
@@ -199,12 +199,12 @@ Int64 Int64__DIV_(Int64 x, Int64 y) { return x / y; }
 bool Int64__EQ_(Int64 x, Int64 y) { return x == y; }
 bool Int64__LT_(Int64 x, Int64 y) { return x < y; }
 bool Int64__GT_(Int64 x, Int64 y) { return x > y; }
-Int64 Int64__LT__LT_(Int64 x, Int64 y) { return x << y; }
-Int64 Int64__GT__GT_(Int64 x, Int64 y) { return x >> y; }
-Int64 Int64_bor(Int64 x, Int64 y) { return x | y; }
-Int64 Int64_band(Int64 x, Int64 y) { return x & y; }
-Int64 Int64_bnot(Int64 x) { return ~x; }
-Int64 Int64_bxor(Int64 x, Int64 y) { return x ^ y; }
+Int64 Int64_bit_MINUS_shift_MINUS_left(Int64 x, Int64 y) { return x << y; }
+Int64 Int64_bit_MINUS_shift_MINUS_right(Int64 x, Int64 y) { return x >> y; }
+Int64 Int64_bit_MINUS_or(Int64 x, Int64 y) { return x | y; }
+Int64 Int64_bit_MINUS_and(Int64 x, Int64 y) { return x & y; }
+Int64 Int64_bit_MINUS_not(Int64 x) { return ~x; }
+Int64 Int64_bit_MINUS_xor(Int64 x, Int64 y) { return x ^ y; }
 string Int64_str(Int64 x) {
     char *buffer = CARP_MALLOC(64);
     snprintf(buffer, 64, "Int64(%lld)", x);

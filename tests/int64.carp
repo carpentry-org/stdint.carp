@@ -9,79 +9,53 @@
     (assert-equal test
                   (from-long 3l)
                   (+ (from-long 1l) (from-long 2l))
-                  "addition works"
-                  =
-                  str)
+                  "addition works")
     (assert-equal test
                   (from-long 3l)
                   (- (from-long 2l) (from-long -1l))
-                  "subtraction works"
-                  =
-                  str)
+                  "subtraction works")
     (assert-equal test
                   (from-long -4l)
                   (* (from-long 2l) (from-long -2l))
-                  "multiplication works"
-                  =
-                  str)
+                  "multiplication works")
     (assert-equal test
                   (from-long 2l)
                   (/ (from-long 5l) (from-long 2l))
-                  "division works"
-                  =
-                  str)
+                  "division works")
     (assert-equal test
                   (from-long 2l)
                   (/ (from-long 5l) (from-long 2l))
-                  "division works"
-                  =
-                  str)
+                  "division works")
     (assert-equal test
                   (from-long 8l)
-                  (<< (from-long 2l) (from-long 2l))
-                  "shift left works"
-                  =
-                  str)
+                  (bit-shift-left (from-long 2l) (from-long 2l))
+                  "shift left works")
     (assert-equal test
                   (from-long 1l)
-                  (>> (from-long 4l) (from-long 2l))
-                  "shift right works"
-                  =
-                  str)
+                  (bit-shift-right (from-long 4l) (from-long 2l))
+                  "shift right works")
     (assert-equal test
                   (from-long 6l)
-                  (bor (from-long 4l) (from-long 2l))
-                  "binary or works"
-                  =
-                  str)
+                  (bit-or (from-long 4l) (from-long 2l))
+                  "binary or works")
     (assert-equal test
                   (from-long 2l)
-                  (band (from-long 6l) (from-long 3l))
-                  "binary and works"
-                  =
-                  str)
+                  (bit-and (from-long 6l) (from-long 3l))
+                  "binary and works")
     (assert-equal test
                   (from-long -129l)
-                  (bnot (from-long 128l))
-                  "binary not works"
-                  =
-                  str)
+                  (bit-not (from-long 128l))
+                  "binary not works")
     (assert-equal test
                   (from-long 5l)
-                  (bxor (from-long 6l) (from-long 3l))
-                  "binary xor works"
-                  =
-                  str)
+                  (bit-xor (from-long 6l) (from-long 3l))
+                  "binary xor works")
     (assert-equal test
                   5l
                   (to-long (from-long 5l))
-                  "conversion works"
-                  Long.=
-                  Long.str)
+                  "conversion works")
     (assert-equal test
                   "Int64(1)"
                   &(str (from-long 1l))
-                  "str works"
-                  String.=
-                  String.str)
+                  "str works")
     (print-test-results test)))
