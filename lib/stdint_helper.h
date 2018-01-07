@@ -1,8 +1,3 @@
-#include <stdbool.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 #include <core.h>
 
 typedef uint8_t Uint8;
