@@ -1,4 +1,4 @@
-(local-include "../lib/stdint_helper.h")
+(relative-include "lib/stdint_helper.h")
 
 (register-type Uint8)
 (register-type Uint16)
