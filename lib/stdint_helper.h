@@ -1,4 +1,5 @@
 #include <core.h>
+#include <carp_memory.h>
 
 typedef uint8_t Uint8;
 typedef uint16_t Uint16;
@@ -22,7 +23,7 @@ Uint8 Uint8_bit_MINUS_or(Uint8 x, Uint8 y) { return x | y; }
 Uint8 Uint8_bit_MINUS_and(Uint8 x, Uint8 y) { return x & y; }
 Uint8 Uint8_bit_MINUS_not(Uint8 x) { return ~x; }
 Uint8 Uint8_bit_MINUS_xor(Uint8 x, Uint8 y) { return x ^ y; }
-string Uint8_str(Uint8 x) {
+String Uint8_str(Uint8 x) {
     int size = snprintf(NULL, 0, "Uint8(%hhu)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Uint8(%hhu)", x);
@@ -48,7 +49,7 @@ Uint16 Uint16_bit_MINUS_or(Uint16 x, Uint16 y) { return x | y; }
 Uint16 Uint16_bit_MINUS_and(Uint16 x, Uint16 y) { return x & y; }
 Uint16 Uint16_bit_MINUS_not(Uint16 x) { return ~x; }
 Uint16 Uint16_bit_MINUS_xor(Uint16 x, Uint16 y) { return x ^ y; }
-string Uint16_str(Uint16 x) {
+String Uint16_str(Uint16 x) {
     int size = snprintf(NULL, 0, "Uint16(%hu)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Uint16(%hu)", x);
@@ -74,7 +75,7 @@ Uint32 Uint32_bit_MINUS_or(Uint32 x, Uint32 y) { return x | y; }
 Uint32 Uint32_bit_MINUS_and(Uint32 x, Uint32 y) { return x & y; }
 Uint32 Uint32_bit_MINUS_not(Uint32 x) { return ~x; }
 Uint32 Uint32_bit_MINUS_xor(Uint32 x, Uint32 y) { return x ^ y; }
-string Uint32_str(Uint32 x) {
+String Uint32_str(Uint32 x) {
     int size = snprintf(NULL, 0, "Uint32(%u)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Uint32(%u)", x);
@@ -100,7 +101,7 @@ Uint64 Uint64_bit_MINUS_or(Uint64 x, Uint64 y) { return x | y; }
 Uint64 Uint64_bit_MINUS_and(Uint64 x, Uint64 y) { return x & y; }
 Uint64 Uint64_bit_MINUS_not(Uint64 x) { return ~x; }
 Uint64 Uint64_bit_MINUS_xor(Uint64 x, Uint64 y) { return x ^ y; }
-string Uint64_str(Uint64 x) {
+String Uint64_str(Uint64 x) {
     int size = snprintf(NULL, 0, "Uint64(%llu)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Uint64(%llu)", x);
@@ -126,7 +127,7 @@ Int8 Int8_bit_MINUS_or(Int8 x, Int8 y) { return x | y; }
 Int8 Int8_bit_MINUS_and(Int8 x, Int8 y) { return x & y; }
 Int8 Int8_bit_MINUS_not(Int8 x) { return ~x; }
 Int8 Int8_bit_MINUS_xor(Int8 x, Int8 y) { return x ^ y; }
-string Int8_str(Int8 x) {
+String Int8_str(Int8 x) {
     int size = snprintf(NULL, 0, "Int8(%hhd)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Int8(%hhd)", x);
@@ -153,7 +154,7 @@ Int16 Int16_bit_MINUS_or(Int16 x, Int16 y) { return x | y; }
 Int16 Int16_bit_MINUS_and(Int16 x, Int16 y) { return x & y; }
 Int16 Int16_bit_MINUS_not(Int16 x) { return ~x; }
 Int16 Int16_bit_MINUS_xor(Int16 x, Int16 y) { return x ^ y; }
-string Int16_str(Int16 x) {
+String Int16_str(Int16 x) {
     int size = snprintf(NULL, 0, "Int16(%hd)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Int16(%hd)", x);
@@ -180,7 +181,7 @@ Int32 Int32_bit_MINUS_or(Int32 x, Int32 y) { return x | y; }
 Int32 Int32_bit_MINUS_and(Int32 x, Int32 y) { return x & y; }
 Int32 Int32_bit_MINUS_not(Int32 x) { return ~x; }
 Int32 Int32_bit_MINUS_xor(Int32 x, Int32 y) { return x ^ y; }
-string Int32_str(Int32 x) {
+String Int32_str(Int32 x) {
     int size = snprintf(NULL, 0, "Int32(%d)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Int32(%d)", x);
@@ -207,7 +208,7 @@ Int64 Int64_bit_MINUS_or(Int64 x, Int64 y) { return x | y; }
 Int64 Int64_bit_MINUS_and(Int64 x, Int64 y) { return x & y; }
 Int64 Int64_bit_MINUS_not(Int64 x) { return ~x; }
 Int64 Int64_bit_MINUS_xor(Int64 x, Int64 y) { return x ^ y; }
-string Int64_str(Int64 x) {
+String Int64_str(Int64 x) {
     int size = snprintf(NULL, 0, "Int64(%lld)", x)+1;
     char *buffer = CARP_MALLOC(size);
     snprintf(buffer, size, "Int64(%lld)", x);
