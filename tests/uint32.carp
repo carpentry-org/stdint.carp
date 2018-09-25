@@ -57,5 +57,4 @@
     (assert-equal test
                   "Uint32(1)"
                   &(str (from-long 1l))
-                  "str works")
-    (print-test-results test)))
+                  "str works")))
