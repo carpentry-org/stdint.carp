@@ -35,6 +35,9 @@ Uint8 Uint8_from_MINUS_long(long x) {
 long Uint8_to_MINUS_long(Uint8 x) {
   return (long) x;
 }
+Uint8 Uint8_copy(Uint8* x) {
+  return *x;
+}
 
 Uint16 Uint16__PLUS_(Uint16 x, Uint16 y) { return x + y; }
 Uint16 Uint16__MINUS_(Uint16 x, Uint16 y) { return x - y; }
@@ -60,6 +63,9 @@ Uint16 Uint16_from_MINUS_long(long x) {
 }
 long Uint16_to_MINUS_long(Uint16 x) {
   return (long) x;
+}
+Uint16 Uint16_copy(Uint16* x) {
+  return *x;
 }
 
 Uint32 Uint32__PLUS_(Uint32 x, Uint32 y) { return x + y; }
@@ -87,6 +93,9 @@ Uint32 Uint32_from_MINUS_long(long x) {
 long Uint32_to_MINUS_long(Uint32 x) {
   return (long) x;
 }
+Uint32 Uint32_copy(Uint32* x) {
+  return *x;
+}
 
 Uint64 Uint64__PLUS_(Uint64 x, Uint64 y) { return x + y; }
 Uint64 Uint64__MINUS_(Uint64 x, Uint64 y) { return x - y; }
@@ -113,6 +122,9 @@ Uint64 Uint64_from_MINUS_long(long x) {
 long Uint64_to_MINUS_long(Uint64 x) {
   return (long) x;
 }
+Uint64 Uint64_copy(Uint64* x) {
+  return *x;
+}
 
 Int8 Int8__PLUS_(Int8 x, Int8 y) { return x + y; }
 Int8 Int8__MINUS_(Int8 x, Int8 y) { return x - y; }
@@ -138,6 +150,9 @@ Int8 Int8_from_MINUS_long(long x) {
 }
 long Int8_to_MINUS_long(Int8 x) {
   return (long) x;
+}
+Int8 Int8_copy(Int8* x) {
+  return *x;
 }
 
 
@@ -166,6 +181,9 @@ Int16 Int16_from_MINUS_long(long x) {
 long Int16_to_MINUS_long(Int16 x) {
   return (long) x;
 }
+Int16 Int16_copy(Int16* x) {
+  return *x;
+}
 
 
 Int32 Int32__PLUS_(Int32 x, Int32 y) { return x + y; }
@@ -192,6 +210,9 @@ Int32 Int32_from_MINUS_long(long x) {
 }
 long Int32_to_MINUS_long(Int32 x) {
   return (long) x;
+}
+Int32 Int32_copy(Int32* x) {
+  return *x;
 }
 
 
@@ -220,4 +241,6 @@ Int64 Int64_from_MINUS_long(long x) {
 long Int64_to_MINUS_long(Int64 x) {
   return (long) x;
 }
-
+Int64 Int64_copy(Int64* x) {
+  return *x;
+}

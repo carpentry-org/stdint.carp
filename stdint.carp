@@ -26,9 +26,9 @@
   (register to-long (λ [Int8] Long))
   (register from-long (λ [Long] Int8))
   (register str (λ [Int8] String))
+  (register copy (Fn [&Int8] Int8))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int8.str a))
 )
 
 (defmodule Int16
@@ -48,9 +48,9 @@
   (register to-long (λ [Int16] Long))
   (register from-long (λ [Long] Int16))
   (register str (λ [Int16] String))
+  (register copy (Fn [&Int16] Int16))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int16.str a))
 )
 
 (defmodule Int32
@@ -70,9 +70,9 @@
   (register to-long (λ [Int32] Long))
   (register from-long (λ [Long] Int32))
   (register str (λ [Int32] String))
+  (register copy (Fn [&Int32] Int32))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int32.str a))
 )
 
 (defmodule Int64
@@ -92,9 +92,9 @@
   (register to-long (λ [Int64] Long))
   (register from-long (λ [Long] Int64))
   (register str (λ [Int64] String))
+  (register copy (Fn [&Int64] Int64))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int64.str a))
 )
 
 (defmodule Uint8
@@ -114,9 +114,9 @@
   (register to-long (λ [Uint8] Long))
   (register from-long (λ [Long] Uint8))
   (register str (λ [Uint8] String))
+  (register copy (Fn [&Uint8] Uint8))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int64.str a))
 )
 
 (defmodule Uint16
@@ -136,9 +136,9 @@
   (register to-long (λ [Uint16] Long))
   (register from-long (λ [Long] Uint16))
   (register str (λ [Uint16] String))
+  (register copy (Fn [&Uint16] Uint16))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int64.str a))
 )
 
 (defmodule Uint32
@@ -158,9 +158,9 @@
   (register to-long (λ [Uint32] Long))
   (register from-long (λ [Long] Uint32))
   (register str (λ [Uint32] String))
+  (register copy (Fn [&Uint32] Uint32))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int64.str a))
 )
 
 (defmodule Uint64
@@ -180,8 +180,7 @@
   (register to-long (λ [Uint64] Long))
   (register from-long (λ [Long] Uint64))
   (register str (λ [Uint64] String))
+  (register copy (Fn [&Uint64] Uint64))
 
-  (defn /= [a b]
-    (not (= a b)))
+  (defn prn [a] (Int64.str a))
 )
-
