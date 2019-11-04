@@ -1,6 +1,3 @@
-#include <core.h>
-#include <carp_memory.h>
-
 typedef uint8_t Uint8;
 typedef uint16_t Uint16;
 typedef uint32_t Uint32;
@@ -39,6 +36,18 @@ Uint8 Uint8_copy(Uint8* x) {
   return *x;
 }
 
+Array Uint8_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len;
+  x.capacity = a->capacity;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
+}
+
 Uint16 Uint16__PLUS_(Uint16 x, Uint16 y) { return x + y; }
 Uint16 Uint16__MINUS_(Uint16 x, Uint16 y) { return x - y; }
 Uint16 Uint16__MUL_(Uint16 x, Uint16 y) { return x * y; }
@@ -66,6 +75,18 @@ long Uint16_to_MINUS_long(Uint16 x) {
 }
 Uint16 Uint16_copy(Uint16* x) {
   return *x;
+}
+
+Array Uint16_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len/2;
+  x.capacity = a->capacity/2;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
 }
 
 Uint32 Uint32__PLUS_(Uint32 x, Uint32 y) { return x + y; }
@@ -97,6 +118,18 @@ Uint32 Uint32_copy(Uint32* x) {
   return *x;
 }
 
+Array Uint32_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len/4;
+  x.capacity = a->capacity/4;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
+}
+
 Uint64 Uint64__PLUS_(Uint64 x, Uint64 y) { return x + y; }
 Uint64 Uint64__MINUS_(Uint64 x, Uint64 y) { return x - y; }
 Uint64 Uint64__MUL_(Uint64 x, Uint64 y) { return x * y; }
@@ -124,6 +157,18 @@ long Uint64_to_MINUS_long(Uint64 x) {
 }
 Uint64 Uint64_copy(Uint64* x) {
   return *x;
+}
+
+Array Uint64_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len/2;
+  x.capacity = a->capacity/2;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
 }
 
 Int8 Int8__PLUS_(Int8 x, Int8 y) { return x + y; }
@@ -155,6 +200,17 @@ Int8 Int8_copy(Int8* x) {
   return *x;
 }
 
+Array Int8_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  int8_t* d = (int8_t*) a->data;
+  x.len = a->len;
+  x.capacity = a->capacity;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
+}
 
 Int16 Int16__PLUS_(Int16 x, Int16 y) { return x + y; }
 Int16 Int16__MINUS_(Int16 x, Int16 y) { return x - y; }
@@ -183,6 +239,18 @@ long Int16_to_MINUS_long(Int16 x) {
 }
 Int16 Int16_copy(Int16* x) {
   return *x;
+}
+
+Array Int16_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len;
+  x.capacity = a->capacity;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
 }
 
 
@@ -215,6 +283,18 @@ Int32 Int32_copy(Int32* x) {
   return *x;
 }
 
+Array Int32_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len/4;
+  x.capacity = a->capacity/4;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
+}
+
 
 Int64 Int64__PLUS_(Int64 x, Int64 y) { return x + y; }
 Int64 Int64__MINUS_(Int64 x, Int64 y) { return x - y; }
@@ -243,4 +323,16 @@ long Int64_to_MINUS_long(Int64 x) {
 }
 Int64 Int64_copy(Int64* x) {
   return *x;
+}
+
+Array Int64_from_MINUS_bytes(Array* a) {
+  int i;
+  Array x;
+  uint8_t* d = (uint8_t*) a->data;
+  x.len = a->len/2;
+  x.capacity = a->capacity/2;
+  x.data = malloc(x.len);
+  memcpy(x.data, a->data, x.len);
+
+  return x;
 }
