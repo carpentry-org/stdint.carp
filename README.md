@@ -1,5 +1,7 @@
 # stdint
 
+**Update:** This is [now](https://github.com/carp-lang/Carp/pull/684) in core!
+
 A wrapper around the types defined in `stdint.h` for Carp.
 
 The numerical types are `Int<8,16,32,64>` and `Uint<8,16,32,64>`; the `U` means
