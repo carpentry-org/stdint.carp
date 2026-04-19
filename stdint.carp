@@ -1,4 +1,3 @@
-(relative-include "lib/stdint_helper.h")
 
 (register-type Uint8)
 (register-type Uint16)
@@ -368,3 +367,4 @@
   (defn = [a b] (Uint64.= @a @b))
   (implements = Uint64Extra.=)
 )
+(system-include "carp_stdint.h")
