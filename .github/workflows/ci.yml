@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Carp
+        uses: carpentry-org/setup-carp@v1
+
+      - name: Run tests
+        run: |
+          set -euo pipefail
+          carp -x tests/int16.carp
+          carp -x tests/int32.carp
+          carp -x tests/int64.carp
+          carp -x tests/int8.carp
+          carp -x tests/uint16.carp
+          carp -x tests/uint32.carp
+          carp -x tests/uint64.carp
+          carp -x tests/uint8.carp
