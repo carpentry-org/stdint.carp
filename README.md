@@ -57,9 +57,4 @@ The interface is the same for all types. The following functions are supported:
 (register from-bytes (λ [&(Array Byte)] (Array T)))
 ```
 
-I hope this helps in getting started! The tests in `tests/` also showcase the
-interface.
-
-<hr/>
-
-Have fun!
+The tests in `tests/` also showcase the interface.
